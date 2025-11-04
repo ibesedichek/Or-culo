@@ -1,5 +1,9 @@
 body {
     background-color:rgb(93, 108, 140);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
 }
 
 #lienzo {
@@ -18,7 +22,10 @@ body {
     border: 1px black solid;
     border-radius: 50%;
     background-color: rgb(116, 181, 181); 
-    position:relative
+    position:relative;
+    animation-name: colorearCara;
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
 }
 
 .ojo {
@@ -66,8 +73,7 @@ body {
   --offset: 96%;
   --x: 70%;
   --y: 50%;
-
-  background: rgb(45, 49, 102);
+    background: rgb(45, 49, 102);
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
@@ -81,6 +87,10 @@ body {
   top:5%;
 }
 
+  #luna:hover {
+    background-color: darkmagenta;
+  }
+
 .ojos2 {
     background-color: rgb(116, 181, 181); 
     width: 15%;
@@ -88,7 +98,10 @@ body {
     border-radius: 50%;
     position:absolute;
     top:30%;
-    border: 10px 
+    border: 10px;
+    animation-name: ColorearOjos2; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
 }
 
 #ojoderecho2 {
@@ -99,4 +112,16 @@ body {
 #ojoizquierdo2 {
     left: 10%;
     top: 40%;
+}
+
+@keyframes colorearCara {
+    0% {background-color: aliceblue;}
+    50% {background-color:rgb(166, 166, 224);}
+    100% {background-color: aliceblue;}
+}
+
+@keyframes ColorearOjos2 {
+     0% {background-color: aliceblue;}
+    50% {background-color:rgb(166, 166, 224);}
+    100% {background-color: aliceblue;}
 }
